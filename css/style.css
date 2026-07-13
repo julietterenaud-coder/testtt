@@ -1,0 +1,97 @@
+main{
+    display:none;
+}
+a {
+  position:absolute;
+  z-index: 9900;
+  background-color: rgba(255, 255, 255, 0.393);
+  color: white;
+  padding: 1px 1px;
+  border-radius: 2px;
+}
+
+a:hover {
+  background-color: rgb(159, 135, 241);
+  transition: 0.3s; /* animation fluide */
+}
+
+p{
+    background-color:rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: "mess3";
+    color: rgba(0, 255, 255, 0.331);
+    border-color: blueviolet;
+    z-index: 6;
+    word-wrap: break-word;
+    max-width: 90vw;
+}
+.petit{
+    background-color:rgba(202, 192, 249, 0.153);
+    font-family: "mess2";
+    color: yellow;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-left: 1px;
+    text-shadow: 10px 10px 10px blueviolet;
+    z-index: 7;
+       word-wrap: break-word;
+    max-width: 90vw;
+    
+    
+}
+/* Sur un bouton */
+.petit {
+  letter-spacing: 0;
+  transition: letter-spacing, 0.5s; /* animation fluide */;
+}
+
+.petit:hover {
+  letter-spacing: 4px;
+}
+.grand{
+      font-size: 32px; /* au lieu de 100px */
+      color: azure;
+      background-color:rgba(0, 0, 0, 0);
+      font-family: "mess", sans-serif;
+      z-index: 3;
+      filter: blur(1px); /* 4px trop fort en petite taille */
+      word-wrap: break-word;
+      max-width: 90vw;
+}
+
+
+ @font-face {
+  font-family: "mess"; /*choix du mot clef */
+  src: url("../Caveat-Bold.ttf");  /*attention il faut bien ajouter '../' si besoin */
+} 
+@font-face {
+  font-family: "mess2"; /*choix du mot clef */
+  src: url("../CoasterSans-Regular.woff");  /*attention il faut bien ajouter '../' si besoin */
+} 
+@font-face {
+  font-family: "mess3"; /*choix du mot clef */
+  src: url("../Nighthawk.otf");  /*attention il faut bien ajouter '../' si besoin */
+
+}
+@font-face {
+    font-family: "hi4";
+    src: url("../FT88-Gothique.woff2");
+}
+body{
+  background-color: rgba(0, 0, 0, 0.089);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

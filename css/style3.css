@@ -1,0 +1,218 @@
+canvas {
+  pointer-events: none; /* le canvas laisse passer les clics */
+}
+
+p, a {
+  pointer-events: auto; /* les liens restent cliquables */
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  z-index: 10;
+  text-align: right;
+  font-family: "hi2";
+  background-color: rgba(131, 105, 60, 0.104);
+  color: white;
+
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+a:hover {
+  color: rgb(47, 8, 176);
+  transition: 0.3s; /* animation fluide */
+}
+main{
+    display: grid;
+  
+    /* background-color: aquamarine; */
+    
+}
+
+
+/* @keyframes chat2{
+     from { background-position: 1px; }
+    to { background-position: 5px; }
+
+} */
+.main-section {
+  position: absolute;
+
+    background-image: url('../montagne.png');
+    background-size: 100% 400%;
+    /* background-position: 0% 400%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+     font-size: 80px;
+ font-family: "hi6";
+  text-align: center;
+    color: rgb(255, 119, 0);
+    /* animation: chat2 3s steps(40) infinite; */
+    animation: typing 20s steps(280) infinite, blink 0.75s step-end infinite;
+    /* animation: chat 10s ease-in-out forwards; */
+  
+
+}
+
+
+@keyframes chat{
+     from { scale:1; filter: blur(1.5px);}
+    to { scale:3 ; filter: blur(3px); }
+
+}
+
+
+p{
+   z-index: 2;
+    /* background-color:rgba(0, 0, 0, 0.514); */
+    margin-bottom: 10px;
+    /* color:rgba(82, 131, 211, 0.637) */
+    mix-blend-mode:exclusion;
+}
+
+
+.moyen{
+   z-index: 2;
+    font-size: 10px;
+    /* background-color:rgb(0, 0, 0); */
+    color: rgba(255, 0, 0, 0.464);
+    mix-blend-mode:exclusion;
+    font-family : "emoji";
+ /* animation: chat 3s steps(40) infinite; */
+  /* animation: goup 40s ease-in-out infinite;  */
+
+
+  
+  display: grid;
+  grid-template-columns: repeat(5, 10px); /*nbr + taille collones */
+  /* gap: 10px; /*gouttières */
+  /* grid-auto-rows: 10px; hauteurs des lignes */
+ /* mix-blend-mode: color-burn; */ 
+}
+
+@keyframes goup {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+
+} 
+.grand{
+  z-index: 1;
+      font-size:90px;
+      color: rgba(255, 195, 140, 0.501);
+      mix-blend-mode:overlay;
+      font-family: "hi7", sans-serif;
+      /* animation: goup 20s ease-in-out infinite; */
+    
+       animation: chat 20s ease-in-out infinite alternate;
+  /* grid-template-columns: re
+at(2, 50px); /*nbr + taille collones */
+   /* gap: 1px; /*gouttières */
+   /* grid-auto-rows: 900px; /*hauteurs des lignes */
+
+}
+body{
+    background-color: rgb(72, 113, 227);
+  width: 100%;
+  cursor : url('../icones/icons8-minecraft-pickaxe-80.png'), pointer;
+margin:0;
+
+
+}
+/* .hero{
+  background-image: url(../wp4108266.jpg);
+   background-size: 200% 500%;
+    background-position: 10% 500%;
+    background-repeat: no-repeat;
+} */
+
+@keyframes writing {
+  from {
+    opacity: 0.5;
+    transform: translateY(-20px) translateZ(0px) scale(0.8);
+   
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-10px) translateZ(20px) scale(1);
+   
+  }
+}
+   .petit{
+    /* background-color:rgb(72, 42, 207); */
+    font-size: 20px;
+    color: azure;
+    mix-blend-mode:soft-light;
+	font-family : "cosmic";
+    /* animation: writing 8s steps(16) infinite, blink 0.75s step-end infinite; */
+
+   animation: chat 10s ease-in-out infinite;
+   }
+
+
+    @font-face {
+  font-family: "b"; /*choix du mot clef */
+  src: url("../Caveat-Bold.ttf");  /*attention il faut bien ajouter '../' si besoin */
+} 
+    @font-face {
+
+  font-family: "mess"; /*choix du mot clef */
+  src: url("../PicNic.woff2") format('woff2');  /*attention il faut bien ajouter '../' si besoin */
+  font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "hi2";
+    src: url("../Nighthawk.otf");
+}
+/* .grand{
+  font-family : "mess";
+} */
+@keyframes typing {
+    from { background-position: 0% 0%; }
+    to { background-position:60% 100%; }
+}
+
+
+
+@font-face {
+    font-family: "hi5";
+    src: url("../Lithops-Regular.woff2");
+}
+@font-face {
+    font-family: "hi6";
+    src: url("../HyperScrypt-Stencil_web.woff2");
+}
+@font-face {
+    font-family: "hi7";
+    src: url("../Fungal-Grow800Thickness500.woff2");
+}
+.moyen, .grand, .petit {
+  position: relative;
+}
+
+/* Sur le conteneur parent, éviter overflow: hidden */
+main, body {
+  overflow: visible; /* ou overflow-x: hidden seulement */
+}
+
+
+
+@font-face {
+    font-family: "emoji";
+    src: url("../ll/typ/EmojiFont.ttf");
+}
+@font-face {
+    font-family: "elastic";
+    src: url("../ll/typ/Elastik.ttf");
+}
+@font-face {
+    font-family: "cosmic";
+    src: url("../ll/typ/Cosmic Echoes.ttf");
+}

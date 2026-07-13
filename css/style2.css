@@ -1,0 +1,107 @@
+main{
+    display:none;
+}
+a {
+  z-index: 9900;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.452);
+  color: white;
+  padding: 90px 90px;
+  border-radius: 20%;
+}
+
+a:hover {
+  color: rgb(47, 8, 176);
+  transition: 0.3s; /* animation fluide */
+}
+
+.vide{opacity: 0;}
+
+.petit{
+    background-color:rgba(255, 255, 255, 0.636);
+    font-size: 30px;
+    font-family:"hi4"; 
+    color: rgb(0, 186, 47);
+    border-color: chartreuse;
+    border-radius: 20%;
+    border-style: outset;
+    background-blend-mode: color-burn;
+
+  display: grid;
+  grid-template-columns: repeat(5, 90px); /*nbr + taille collones */
+  gap: 5px; /*gouttières */
+  grid-auto-rows: 100px; /*hauteurs des lignes */
+}
+
+@keyframes scroll { 
+  from {
+  /*état de départ*/
+   transform: translateY(0px);
+  }
+
+  to {
+  /*état de fin*/
+    transform: translateY(-500px);
+  }
+}
+p{
+    background-color:rgba(16, 0, 198, 0.204);
+    margin-bottom: 40px;
+    font-family:"hi3" ;
+    color: aquamarine;
+             animation-name: scroll;
+
+  animation-duration: 15s;
+  animation-direction: alternate;/*lire l'animation dans un sens puis dans l'autre*/
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.grand{
+    font-family: "elastic";
+      font-size:70px;
+      color: beige;
+}
+.angle{
+    range:30deg;
+}
+body{
+    background-color: rgb(0, 0, 0);
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(9, 200px); /*nbr + taille collones */
+  gap: 10px; /*gouttières */
+  grid-auto-rows: 200px; /*hauteurs des lignes */
+
+}
+@font-face {
+    font-family: "hi";
+    src: url("../Mess-Light_web.woff2");
+}
+@font-face {
+    font-family: "hi2";
+    src: url("../Nighthawk.otf");
+}
+@font-face {
+    font-family: "hi3";
+    src: url("../matrix.ttf");
+}
+@font-face {
+    font-family: "hi4";
+    src: url("../FT88-Gothique.woff2");
+}
+
+@font-face {
+    font-family: "new1";
+    src: url("../ll/typ/Mobalys-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: "elastic";
+    src: url("../ll/typ/Elastik.ttf");
+}
+@font-face {
+    font-family: "cosmic";
+    src: url("../ll/typ/Cosmic Echoes.ttf");
+}
